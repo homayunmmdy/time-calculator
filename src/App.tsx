@@ -28,8 +28,8 @@ const App = () => {
         <BrowserRouter>
           <LangSelector />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path={`/${t('meta.lang')}`} element={<Home />} />
+            <Route path={`/${t('meta.lang')}/about`} element={<About />} />
           </Routes>
         </BrowserRouter>
       </Suspense>

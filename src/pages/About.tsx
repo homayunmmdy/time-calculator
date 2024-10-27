@@ -4,7 +4,7 @@ const About = () => {
   const { t } = useTranslation();
   return (
     <>
-      <p>{t("description")}</p>
+      <p>{t("config.description")}</p>
     </>
   );
 };

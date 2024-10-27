@@ -5,5 +5,8 @@
     "keywords": "super app, one+, oneplus,all in one",
     "local": "en_US",
     "description": "super app offers powerful web applications for complex, time-saving calculations across fields."
+  },
+  "config": {
+    "description": "The One+ super application launched in 27 ofOct 2024 with the mission of delivering powerful web applications. Complex and time-consuming calculations across various fields can be performed effortlessly through One+. Additionally, we provide easy access to essential everyday applications designed to meet your common needs. Our platform streamlines your digital experience by bringing together versatile tools and utilities in one convenient location."
   }
 }
