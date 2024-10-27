@@ -1,4 +1,9 @@
 {
-  "title": "One Plus",
-  "description": "super app offers powerful web applications for complex, time-saving calculations across fields."
+  "meta": {
+    "lang": "en",
+    "title": "One Plus |  super app offers powerful web applications for complex",
+    "keywords": "super app, one+, oneplus,all in one",
+    "local": "en_US",
+    "description": "super app offers powerful web applications for complex, time-saving calculations across fields."
+  }
 }
