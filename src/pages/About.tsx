@@ -4,7 +4,7 @@ const About = () => {
   const { t } = useTranslation();
   return (
     <>
-    <div className="sm:flex items-center max-w-screen-xl">
+    <div className="sm:flex items-center w-[94%] md:w-[92%] mx-auto">
     <div className="sm:w-1/2 p-10">
         <div className="image object-center text-center">
             <img src="https://i.imgur.com/WbQnbas.png" />

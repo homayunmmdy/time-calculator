@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { LangSelector } from "./components/LangSelector";
 import About from "./pages/About";
 import Home from "./pages/Home";
+import WhatsappLinkGenerator from "./pages/WhatsappLinkGenerator";
 
 const App = () => {
   const { t } = useTranslation();
@@ -30,6 +31,7 @@ const App = () => {
           <Routes>
             <Route path={`/${t('meta.lang')}`} element={<Home />} />
             <Route path={`/${t('meta.lang')}/about`} element={<About />} />
+            <Route path={`/${t('meta.lang')}/whatsapp-link-generator`} element={<WhatsappLinkGenerator />} />
           </Routes>
         </BrowserRouter>
       </Suspense>

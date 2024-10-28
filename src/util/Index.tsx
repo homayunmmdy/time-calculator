@@ -7,7 +7,7 @@ export const useLangParams = () => {
   const currentLang = currentPath.split("/")[1];
   const remainingPath = currentPath.split("/").slice(2).join("/");
 
-  return {currentPath, currentLang, remainingPath };
+  return { currentPath, currentLang, remainingPath };
 };
 
 export const useLangHandler = () => {
@@ -28,4 +28,17 @@ export const useLangHandler = () => {
   };
 
   return onChangeLang;
+};
+
+
+export const generateWhatsAppLink = (
+  countryCode: string,
+  phoneNumber: string,
+  message: string
+) => {
+  // Remove leading zeros from the phone number
+  const formattedNumber = phoneNumber.replace(/^0+/, "");
+  return `https://wa.me/+${countryCode}${formattedNumber}${
+    message ? `?text=${encodeURIComponent(message)}` : ""
+  }`;
 };
