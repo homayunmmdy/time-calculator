@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { LANGUAGES } from "../constants/lang";
 import { useLangHandler, useLangParams } from "../util/Index";
 
