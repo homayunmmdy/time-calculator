@@ -1,13 +1,15 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
+import Cards from "../components/Cards";
 
 const Home = () => {
-    const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
-    <>
-    <h1>{t("meta.title")}</h1>
-    </>
-  )
-}
+    <main className="w-[94%] md:w-[92%] mx-auto">
+      <h1 className="hidden">{t("meta.title")}</h1>
+      <Cards />
+    </main>
+  );
+};
 
-export default Home
+export default Home;

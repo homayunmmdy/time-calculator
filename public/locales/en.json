@@ -24,5 +24,8 @@
     "phoneNumberPlaceholder": "Enter your phone number",
     "messagePlaceholder": "Enter your message (optional)",
     "link": "WhatsApp Link:"
+  },
+  "cards": {
+    "1": "WhatsApp Password Generator"
   }
 }
