@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+# Multi-Language Website 
+[Multi language.webm](https://github.com/homayunmmdy/Multi-language/assets/129702378/6e858b12-9e1a-4d1f-9e50-edd2a4371859)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Introduction
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to our multi-language website powered by Next.js! This application supports various languages, including English, French, Dutch, Español, and more. You can even use the application in your preferred language by customizing the language settings.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To run this application, make sure you have Node.js installed on your machine. If not, you can download it from [Node.js website](https://nodejs.org/).
 
-- Configure the top-level `parserOptions` property like this:
+1. **Clone the Repository:**
+   ```bash
+   git clone -b 2.multi_language  https://github.com/homayunmmdy/my-app.git
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. **Navigate to the Project Directory:**
+   ```bash
+   cd my-app
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+4. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. **Access the Application:**
+   Open your browser and go to [http://localhost:3000](http://localhost:3000).
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+4. **Change Language:**
+   - Use the language selector in the header to switch between supported languages.
+   - The application will automatically update the cookie to remember your language preference.
+
+## Additional Information
+
+Feel free to explore the Next.js documentation for more advanced configurations and features: [Next.js Documentation](https://nextjs.org/docs).
+
+Thank you for using our multi-language website! If you encounter any issues or have suggestions, please let us know by opening an issue on our GitHub repository.
