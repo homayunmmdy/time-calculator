@@ -64,26 +64,75 @@ console.log(transform(input));
 same (arg) => same (result)
 
 we use theses in pure functions
+
 - No random values
 - No current date/time
 - No global state (DOM , files , db , etc)
 - No mutation of parameters
 
 here are the benefits of the pure functions
+
 - Self-documenting
 - Easily testable
 - Concurrency
 - Cacheable
 
 # Immutablitiy
+
 Once created , cannot be changed!
 const is not immutable we can't reassign it we can change it
 
 <b>benefit of immutablity</b>
+
 - Predictability
 - Faster Changes detection
 - Concurrency
 
 <b>Cons</b>
+
 - Performance
 - Memmory overhead
+
+## Update Object
+
+the rest operator do shallow copy which like refrance in primitve and refrence values.
+
+```javascript
+const person = {
+  name: "john",
+  address: {
+    country: "USA",
+    citry: "San Francisco",
+  },
+};
+const updated = { ...person, name: "Homayoun" };
+console.log(updated);
+```
+
+if example if we change update like this and log person
+
+```javascript
+updated.address.city = "New York";
+console.log(person)
+```
+we see that the city of person will change so we need to take deep copy for nested object
+
+```javascript
+const person = {
+  name: "john",
+  address: {
+    country: "USA",
+    citry: "San Francisco",
+  },
+};
+
+const updated = {
+  ...person,
+  address: {
+    ...person.address,
+    city: "New York",
+  },
+  name: "Homayoun",
+};
+console.log(updated);
+```
