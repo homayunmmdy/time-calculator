@@ -74,3 +74,16 @@ here are the benefits of the pure functions
 - Easily testable
 - Concurrency
 - Cacheable
+
+# Immutablitiy
+Once created , cannot be changed!
+const is not immutable we can't reassign it we can change it
+
+<b>benefit of immutablity</b>
+- Predictability
+- Faster Changes detection
+- Concurrency
+
+<b>Cons</b>
+- Performance
+- Memmory overhead
