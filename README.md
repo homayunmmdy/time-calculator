@@ -13,9 +13,25 @@ higher order function is function that takes the
 a powerful technique that allows developers to combine multiple functions into a single function
 
 ```javascript
+let input = " JavaScript ";
 const trim = str => str.trim();
 const wrapInDiv = str => `<div>${str}</div>`
 const toLowerCase = str => str.toLowerCase()
 
 const result = wrapInDiv(toLowerCase(trim(input)))
+```
+
+## Composing and Piping
+```javascript
+import { pipe } from "lodash/fp";
+
+let input = " JavaScript ";
+const trim = (str) => str.trim();
+const wrapInDiv = (str) => `<div>${str}</div>`;
+const toLowerCase = (str) => str.toLowerCase();
+
+const transform = pipe(trim, toLowerCase, wrapInDiv);
+
+transform(input);
+
 ```
