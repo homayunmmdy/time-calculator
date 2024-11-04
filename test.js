@@ -1,17 +1,12 @@
-const person = {
-  name: "john",
-  address: {
-    country: "USA",
-    citry: "San Francisco",
-  },
-};
+const numbers = [1, 2, 3];
 
-const updated = {
-  ...person,
-  address: {
-    ...person.address,
-    city: "New York",
-  },
-  name: "Homayoun",
-};
-console.log(updated);
+// Adding
+const index = numbers.indexOf(2);
+[...numbers.slice(0, index), 2, ...numbers.slice(index)];
+
+// Removing
+numbers.filter((n) => n !== 2);
+
+// Updating
+numbers.map((n) => (n === 2 ? 20 : n));
+
