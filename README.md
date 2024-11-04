@@ -35,3 +35,21 @@ const transform = pipe(trim, toLowerCase, wrapInDiv);
 transform(input);
 
 ```
+
+## Currying
+transforms a function with multiple arguments into a nested series of functions, each taking a single argument
+
+```javascript
+import { pipe } from "lodash/fp";
+
+let input = " JavaScript ";
+const trim = (str) => str.trim();
+// const wrapInDiv = (str) => `<div>${str}</div>`;
+const wrap = (type) => (str) => `<${type}>${str}</${type}>`;
+const toLowerCase = (str) => str.toLowerCase();
+
+const transform = pipe(trim, toLowerCase, wrap("dev"));
+
+console.log(transform(input));
+
+```
