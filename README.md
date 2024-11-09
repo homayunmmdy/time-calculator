@@ -191,3 +191,9 @@ the store is charge to calling the reducer . reduce compute the state and then r
 then the store will update
 
 ![Screenshot 2024-11-09 200354](https://github.com/user-attachments/assets/ee118fb2-a43a-4594-ab31-f88855095524)
+
+## Steps to follow for redux application 
+- Design the store 
+- Define the action
+- Create a reducer
+- Set up the store
