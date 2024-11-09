@@ -213,3 +213,23 @@ here is the simple structure for our application
   }
 ]
 ```
+
+## Define the action
+
+Action is just plain javascript object that <mark>describe what just happend</mark>
+
+- Add a Bug
+- Mark as Resolved
+- Delete a Bug
+
+here is an example
+description is data associate with the action
+<b>payload</b> is an object that contain all the data about an action
+```json
+{
+  "type": "ADD_BUG",
+  "playload": {
+    "description": "",
+  }
+}
+```
