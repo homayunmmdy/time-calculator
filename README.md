@@ -233,3 +233,11 @@ description is data associate with the action
   }
 }
 ```
+
+# Store 
+is the object with these properties: 
+<b>Dispatch</b> is used to send form data to the Redux store, which then updates the state accordingly
+<b>subscribe:</b> notify when ever the state is changed
+<b>getState:</b> store that returns the current state of the application
+<b>replaceReducer:</b> replaces the current active root reducer function with a new root reducer function
+<b>Symbol:</b> which we talk later
