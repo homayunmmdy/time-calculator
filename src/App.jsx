@@ -1,4 +1,4 @@
-import { bugAdded, bugRemoved } from "./actions";
+import { bugAdded, bugRemoved, bugResolved } from "./actions";
 import store from "./store";
 
 const App = () => {
@@ -7,7 +7,7 @@ const App = () => {
   })
 
   store.dispatch(bugAdded('Bug 1'))
-
+  store.dispatch(bugResolved(1))
   unsubscribe()
 
   store.dispatch(bugRemoved(1))
