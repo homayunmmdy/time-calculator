@@ -1,5 +1,12 @@
-function store() {
+import reducer from './reducer'
+
+function store(reducer) {
   let state;
+
+  function dispatch(action) {
+    // Call the reducer to get the new state
+    state = reducer(state , action)
+  }
 
   function getState() {
     return state;
@@ -7,7 +14,8 @@ function store() {
 
   return {
     getState,
+    dispatch
   };
 }
 
-export default store;
+export default store(reducer);
