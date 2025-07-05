@@ -21,8 +21,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
   padding: 40px;
-  max-width: 600px;
-  width: 100%;
+  width: 80%;
   margin-top: 50px;
 }
 
@@ -63,26 +62,34 @@ input[type="number"] {
   padding: 15px 20px;
   border: none;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-size: 1.1rem;
   font-weight: 500;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
+  color: #ffffff;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
+  background: inherit;
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus {
   outline: none;
-  background: rgba(255, 255, 255, 0.3);
+  background: inherit;
   border-color: #ffd700;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
   transform: translateY(-2px);
+  color: #ffffff;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
 }
 
 input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
 }
 
 .time-inputs {
@@ -261,10 +268,21 @@ input::placeholder {
   background: rgba(255, 215, 0, 0.7);
 }
 
-@media (max-width: 480px) {
+.main-layout {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .main-layout {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+@media (max-width: 576px) {
   .container {
     padding: 25px;
     margin-top: 20px;
+    width: 100%;
   }
 
   h1 {

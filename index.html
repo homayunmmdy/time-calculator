@@ -8,37 +8,42 @@
 <body>
     <div class="container">
         <h1>⏰ Time Calculator</h1>
+        <div class="main-layout">
+
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="Enter time entry title...">
+                </div>
+                
+                <div class="time-inputs">
+                    <div class="input-group">
+                        <label for="hours">Hours</label>
+                        <input type="number" id="hours" min="0" placeholder="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="minutes">Minutes</label>
+                        <input type="number" id="minutes" min="0" max="59" placeholder="0">
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="addTime()">Add Time</button>
+            </div>
+            <div>
+
+                <div class="total-section">
+                    <div class="total-time" id="totalTime">00:00</div>
+                    <div class="total-label">Total Time</div>
+                </div>
         
-        <div class="input-section">
-            <div class="input-group">
-                <label for="title">Title</label>
-                <input type="text" id="title" placeholder="Enter time entry title...">
-            </div>
-            
-            <div class="time-inputs">
-                <div class="input-group">
-                    <label for="hours">Hours</label>
-                    <input type="number" id="hours" min="0" placeholder="0">
-                </div>
-                <div class="input-group">
-                    <label for="minutes">Minutes</label>
-                    <input type="number" id="minutes" min="0" max="59" placeholder="0">
+                <div class="times-list">
+                    <h3>Time Entries</h3>
+                    <div id="timesList"><div class="empty-state">No time entries yet. Add some times to get started!</div></div>
+                    <button class="clear-btn" onclick="clearAll()" style="display: none;" id="clearBtn">Clear All</button>
                 </div>
             </div>
-            
-            <button class="btn" onclick="addTime()">Add Time</button>
         </div>
 
-        <div class="total-section">
-            <div class="total-time" id="totalTime">00:00</div>
-            <div class="total-label">Total Time</div>
-        </div>
-
-        <div class="times-list">
-            <h3>Time Entries</h3>
-            <div id="timesList"><div class="empty-state">No time entries yet. Add some times to get started!</div></div>
-            <button class="clear-btn" onclick="clearAll()" style="display: none;" id="clearBtn">Clear All</button>
-        </div>
     </div>
 
 </body>
