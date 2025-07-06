@@ -3,17 +3,20 @@ let totalMinutes = 0;
 
 // Load data from local storage when the page loads
 function loadFromLocalStorage() {
-  const savedData = localStorage.getItem('timeEntries');
+  const savedData = localStorage.getItem("timeEntries");
   if (savedData) {
     timeEntries = JSON.parse(savedData);
     // Recalculate total minutes
-    totalMinutes = timeEntries.reduce((total, entry) => total + entry.totalMinutes, 0);
+    totalMinutes = timeEntries.reduce(
+      (total, entry) => total + entry.totalMinutes,
+      0
+    );
   }
 }
 
 // Save data to local storage
 function saveToLocalStorage() {
-  localStorage.setItem('timeEntries', JSON.stringify(timeEntries));
+  localStorage.setItem("timeEntries", JSON.stringify(timeEntries));
 }
 
 function addTime() {
@@ -28,6 +31,12 @@ function addTime() {
 
   if (hours === 0 && minutes === 0) {
     alert("Please enter a valid time (hours and/or minutes).");
+    return;
+  } else if (minutes > 59) {
+    alert("Please enter between 1 to 59 for minutes");
+    return;
+  } else if (hours > 999) {
+    alert("The maximum hour for each task is under 1000 hours");
     return;
   }
 
@@ -62,7 +71,7 @@ function clearAll() {
     timeEntries = [];
     totalMinutes = 0;
     updateDisplay();
-        saveToLocalStorage(); // Save after clearing
+    saveToLocalStorage(); // Save after clearing
   }
 }
 
